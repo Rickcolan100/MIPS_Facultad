@@ -27,7 +27,7 @@ Loop:    daddi   $t0, $zero, 8
          daddi   $t2, $zero, 1
          slti    $t1, $s2, 0
          beq     $t1, $t2, Loop
-         slti    $t1, $s2, 10
+         slti    $t1, $s2, 0x00000a
          bnez    $t1, Loop
          daddi   $t0, $zero, 6
          sd      $t0, 0($s0)
@@ -42,7 +42,7 @@ LoopDos: daddi   $t0, $zero, 8
          daddi   $t4, $zero, 1
          slti    $t3, $s3, 0
          beq     $t3, $t4, LoopDos
-         slti    $t3, $s3, 10
+         slti    $t3, $s3, 0x00000a
          bnez    $t3, LoopDos
          daddi   $t0, $zero, 6
          sd      $t0, 0($s0)

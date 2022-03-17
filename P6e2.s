@@ -37,7 +37,7 @@ Loop:     daddi   $t0, $0, 8
           slti    $t1, $s2, 0
           beq     $t1, $t2, Loop
           slti    $t1, $s2, 10
-          bnez    $t1, $t1, Loop
+          bnez    $t1, $zero, Loop
           jal     Muestra
           ld      $ra, 0($sp)
           ld      $s0, 8($sp)
